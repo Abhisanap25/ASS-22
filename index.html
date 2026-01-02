@@ -54,3 +54,30 @@
         }
     </style>
 </head>
+<body>
+
+<div class="container">
+    <h2>Password Toggle</h2>
+
+    <div class="password-box">
+        <input type="password" id="password" placeholder="Enter password">
+        <span id="toggle" onclick="togglePassword()">😇</span>
+    </div>
+</div>
+
+<script>
+function togglePassword() {
+    const password = document.getElementById("password");
+    const toggleIcon = document.getElementById("toggle");
+
+    if (password.type === "password") {
+        password.type = "text";
+        toggleIcon.textContent = "😍";
+    } else {
+        password.type = "password";
+        toggleIcon.textContent = "👀";
+    }
+}
+</script>
+</body>
+</html>
